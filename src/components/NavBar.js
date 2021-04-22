@@ -41,6 +41,10 @@ export default function NavBar() {
           <NavDropdown.Divider />
           <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
         </NavDropdown>
+        <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" bg='primary'/>
+      <Button variant="outline-light">Search</Button>
+    </Form>
             </Navbar>
       </Nav>
     )
