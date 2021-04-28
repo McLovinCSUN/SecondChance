@@ -1,3 +1,17 @@
 .navigationBar {
-    background-color:orange;
-  }
+  background-color: #fe7ec9;
+  display: right;
+}
+.nav-link {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+h4 {
+  color: white;
+  font-weight: 700;
+  margin-left: 12vw;
+  margin-right: 2vw;
+}
+.mr-sm-2 {
+  margin-left: 5vw;
+}
