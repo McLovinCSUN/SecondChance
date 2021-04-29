@@ -13,7 +13,7 @@ button {
   color: white;
 }
 .emailForm {
-  display: none;
+  visibility: hidden;
 }
 .email,
 .address {
