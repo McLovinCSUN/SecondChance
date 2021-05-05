@@ -23,19 +23,8 @@ button {
   background-color: white;
   border-radius: 6px;
 }
-.map {
-  height: 50px;
-}
-.envelope {
-  margin-top: 60px;
-}
-.address {
-  margin-left: 500px;
-}
-.email {
-  margin-right: 500px;
-}
-@media only screen and (max-width: 480px) {
+
+@media only screen and (min-width: 411px) {
   .footerContainer {
     flex-direction: column;
   }
@@ -52,7 +41,16 @@ button {
     margin-right: 10px;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
+  .footerContainer {
+    flex-direction: row;
+  }
+  .map {
+    height: 50px;
+  }
+  .envelope {
+    margin-top: 60px;
+  }
   .address {
     margin-left: 80px;
   }
