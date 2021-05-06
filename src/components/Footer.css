@@ -1,0 +1,62 @@
+.footerContainer {
+  display: flex;
+  position: relative;
+  bottom: 0;
+  background-color: #fe7ec9;
+  text-align: center;
+  width: 100%;
+  color: #4d4d4d;
+}
+button {
+  background: none;
+  border: none;
+  color: #4d4d4d;
+}
+.emailForm {
+  visibility: hidden;
+}
+.email,
+.address {
+  justify-content: center;
+  flex-grow: 2;
+  margin: 20px;
+  background-color: white;
+  border-radius: 6px;
+}
+.map {
+  height: 50px;
+}
+.envelope {
+  margin-top: 60px;
+}
+.address {
+  margin-left: 500px;
+}
+.email {
+  margin-right: 500px;
+}
+@media only screen and (max-width: 480px) {
+  .footerContainer {
+    flex-direction: column;
+  }
+  .map {
+    height: 50px;
+  }
+  .envelope {
+    margin-top: 20px;
+  }
+  .address {
+    margin-left: 10px;
+  }
+  .email {
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .address {
+    margin-left: 80px;
+  }
+  .email {
+    margin-right: 80px;
+  }
+}
