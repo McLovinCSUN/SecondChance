@@ -14,11 +14,9 @@ export default function Stories() {
   return (
       <div id="main_panel">          
       <div className='inner-pannel'>
-      
         <div >
-         
                 {stories.map(story => (
-                    <div>
+                    <tbody>
                         <tr>
                         <td className="picture"> <img className='tinyLogo' src={`${story.pic}`} /></td> 
                         
@@ -26,9 +24,8 @@ export default function Stories() {
                         <td>{story.program}</td>
                         <td>{story.testimony}</td>
                         </tr>        
-                    </div>
+                    </tbody>
                 ))}
-           
         </div>
     </div>
     </div>

@@ -6,17 +6,14 @@ import Yazmine from './images/yazmine.jpg';
 import Andrew from './images/andrew.png';
 import Mir from './images/mir.png';
 
-export function makeServer({ environment = "development" } = {}) {
-  let server = new Server({
-    environment,
+export function makeServer({environment = "development"} = {}) {
 
-    models: {
-      resource: Model,
-      story: Model,
-    },
-
-    seeds(server) {
-        server.create("resource", {
+    let server = new Server({
+        environment,
+        routes() {
+            this.get("/api/resources", () => {
+                    return {
+                        resources: [{
                         id: 1, 
                         name: "Code Tenderloin", 
                         location: "California", 
@@ -29,8 +26,8 @@ export function makeServer({ environment = "development" } = {}) {
                         twitter: 'https://twitter.com/codetenderloin',
                         remote: true,
                         prisonProgram: false,
-                    })
-        server.create("resource", {
+                        },
+                        {
                         id: 2, 
                         name: "Emergent Works", 
                         location: "New York", 
@@ -43,8 +40,8 @@ export function makeServer({ environment = "development" } = {}) {
                         twitter: 'https://twitter.com/emergentworks_',
                         remote: true,
                         prisonProgram: false,
-                    })
-        server.create("resource", {
+                        },
+                        {
                         id: 3, 
                         name: "Justice Through Code", 
                         location: "New York", 
@@ -57,8 +54,8 @@ export function makeServer({ environment = "development" } = {}) {
                         twitter: 'https://twitter.com/JusticeColumbia',
                         remote: true,
                         prisonProgram: false,
-                    })
-        server.create("resource", {
+                      }, 
+                      {
                         id: 4, 
                         name: "Next Chapter", 
                         location: "California", 
@@ -71,8 +68,8 @@ export function makeServer({ environment = "development" } = {}) {
                         twitter: '',
                         remote: true,
                         prisonProgram: false,
-                    })
-        server.create("resource", {
+                      },
+                           {
                         id: 5, 
                         name: "Reboot LA", 
                         location: "Los Angeles County Residents ONLY", 
@@ -85,9 +82,9 @@ export function makeServer({ environment = "development" } = {}) {
                         twitter: '',
                         remote: true,
                         prisonProgram: false,
-                    })
-      server.create("resource", {
-                        id: 6, 
+                      },
+                           {
+                          id: 6, 
                         name: "The Last Mile", 
                         location: "California, Michigan, Indiana, Kansas, Oklahoma, North Dekota", 
                         address: "548 Market St. PMB 60414 San Francisco, CA 94104", 
@@ -99,9 +96,9 @@ export function makeServer({ environment = "development" } = {}) {
                         twitter: '',
                         remote: false,
                         prisonProgram: true,
-                    })
-                     server.create("resource", {
-                        id: 7, 
+                      },
+                           {
+                           id: 7, 
                         name: "Underdog Devs", 
                         location: "Florida", 
                         address: "900 E. Pine St., Suite 202, Seattle, WA 98122", 
@@ -113,8 +110,8 @@ export function makeServer({ environment = "development" } = {}) {
                         twitter: 'https://twitter.com/UnderdogDevs',
                         remote: true,
                         prisonProgram: false,
-                    })
-                     server.create("resource", {
+                      },
+                           {
                         id: 8, 
                         name: "Unloop", 
                         location: "Washington State", 
@@ -127,58 +124,80 @@ export function makeServer({ environment = "development" } = {}) {
                         twitter: 'https://twitter.com/un_loop',
                         remote: true,
                         prisonProgram: true,
-                    })
-           server.create("story", {
+                      },
+                  ]
+                }
+                }
+            )
+            this.get("/api/stories", () => {
+                return {
+                    stories: [{
                         id: 1, 
                         name: "Maria", 
                         program: "Emergent Works, Justice Through Code, Underdog Devs", 
                         testimony: "After completing Emergent Works cohort over the winter I learned how to use git properly and developed a mobile application using React Native. Justice Through Code has made more confortable with Python. Underdog Devs has a whole community to help you grow your tech skills and soft skills. With these programs I would have not been able to build my portfolio and land an internship with Disney Tech this summer!", 
                         pic: Maria, 
-                    })
-                server.create("story", {
-                        id: 2, 
+                    },
+                   {
+                    id: 2, 
                         name: "Ade", 
                         program: "Emergent Works", 
                         testimony: "Joining the Winter cohort I was partnered up with a mentor who thaught me JavaScript and ReactJS. I am excited to land a webdeveloper role soon.", 
                         pic: Ade, 
-                    })
-             server.create("story", {
-                        id: 3, 
+                    },
+                    {                       
+                      id: 3, 
                         name: "Yazmine", 
                         program: "Reboot LA", 
                         testimony: "I enjoyed getting a stipend while learning to code. It was difficult getting the concepts but the instructor made himself avalible and I learned a lot.", 
-                        pic: Yazmine, 
-                    })     
-           server.create("story", {
-                        id: 4, 
+                        pic: Yazmine,
+                    },
+                     {
+                      id: 4, 
                         name: "Andrew", 
                         program: "Code Tenderloin", 
                         testimony: "On site facility and remote settting. After I was done with the program they helped me land a frontend developer role.", 
                         pic: Andrew, 
-                    })
-           server.create("story", {
-                        id: 5, 
+                    },
+                     {
+                 id: 5, 
                         name: "Mir", 
                         program: "The Last Mile", 
                         testimony: "I was incarcerated for over 10+ years and did not have any clue on what I was going to do after released, but when I found out The Last Mile was going to be teaching programming classes I was curious and reached out. I am glad I did. After paroling they helped me land a job as a web developer. I am so greatful!", 
-                        pic: Mir, 
-                    }) 
-          
-      },
+                        pic: Mir,  
+                    },
+                    ]}})
+            this.get("/api/media", () => {
+                return {
+                    media: [{
+                        id: 1, 
+                        date: 'February 17, 2021',
+                        title: "Justice Through Code Program Featured in Amazon Web Services Short Documentary", 
+                        link: "https://centerforjustice.columbia.edu/news/justice-through-code-program-featured-amazon-web-services-short-documentary", 
+                        pic: 'https://centerforjustice.columbia.edu/sites/default/files/styles/cu_crop/public/content/JTC%20Video%20Web%20Banner_0.png?itok=UoHTedEP',
+                      },
+                      {
+                        id: 2, 
+                        date: 'February 17, 2021',
+                        title: "Justice Through Code Program Featured in Amazon Web Services Short Documentary", 
+                        link: "https://centerforjustice.columbia.edu/news/justice-through-code-program-featured-amazon-web-services-short-documentary", 
+                        pic: 'https://centerforjustice.columbia.edu/sites/default/files/styles/cu_crop/public/content/JTC%20Video%20Web%20Banner_0.png?itok=UoHTedEP',
+                      },
+                      {
+                        id: 1, 
+                        date: 'February 17, 2021',
+                        title: "Justice Through Code Program Featured in Amazon Web Services Short Documentary", 
+                        link: "https://centerforjustice.columbia.edu/news/justice-through-code-program-featured-amazon-web-services-short-documentary", 
+                        pic: 'https://centerforjustice.columbia.edu/sites/default/files/styles/cu_crop/public/content/JTC%20Video%20Web%20Banner_0.png?itok=UoHTedEP',
+                      },
 
-     
-
-    routes() {
-      this.namespace = "api"
-
-      this.get("/resources", schema => {
-        return schema.resources.all()
+                    ],
+                
+                }
+            })
+        }
+        
       })
-       this.get("/stories", schema => {
-        return schema.stories.all()
-      })
-    },
-  })
-
-  return server
+        
+  return server;
 }

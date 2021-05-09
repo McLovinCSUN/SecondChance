@@ -10,12 +10,15 @@ import Footer from './components/Footer';
 import { makeServer } from './Server'
 
 if (process.env.NODE_ENV === "development") {
-  makeServer()
+    if (window.server) {
+    window.server.shutdown();
+  }
+  window.server = makeServer();
 }
 
 function App() {
 
-  return ( 
+  return (
         
         <div id="main_panel">
         <NavBar />
