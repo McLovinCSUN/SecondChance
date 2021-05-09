@@ -18,11 +18,10 @@ export default function Stories() {
                 {stories.map(story => (
                     <tbody>
                         <tr>
-                        <td className="picture"> <img className='tinyLogo' src={`${story.pic}`} /></td> 
-                        
+                        <td className="picture"> <img className='tinyLogo' src={`${story.pic}`} /></td>   
                         <td>{story.name}</td>
                         <td>{story.program}</td>
-                        <td>{story.testimony}</td>
+                        <td><i>"{story.testimony}"</i></td>
                         </tr>        
                     </tbody>
                 ))}

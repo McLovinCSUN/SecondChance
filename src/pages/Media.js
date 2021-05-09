@@ -18,8 +18,10 @@ export default function Media() {
          {medias.map(media => (
             <tbody>
                 <tr>
-                    <td>{media.date}</td>
-                    <td>{media.title}</td>
+                  <td><img alt='Media Picture' src={media.pic} width='300' height='200'/></td>
+                  <td>{media.date}</td>
+                  <td>{media.title}</td>
+                  <td><a href={media.link}>Read More</a></td>
                 </tr>        
             </tbody>
             ))}  

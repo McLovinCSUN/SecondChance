@@ -19,9 +19,11 @@ export default function Resources() {
          {resources.map(resource => (
             <tbody>
               <tr>
+                <td><a href={resource.website}><img alt='Resosurce Logo' src={resource.logo} width='200' height='80'/></a></td>
                 <td>{resource.name}</td>
                 <td>{resource.location}</td>
                 <td>{resource.address}</td>
+                <td><a href={resource.website}>{resource.website}</a></td>
                 <td><a href={`mailto:${resource.email}`}>{resource.email}</a></td>
                 <td><a href={`${resource.linkedIn}`}>LinkedIn</a></td>
                 <td><a href={`${resource.facebook}`}>Facebook</a></td>
