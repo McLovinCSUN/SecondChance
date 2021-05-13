@@ -10,10 +10,10 @@ export default function NavBar() {
         
         <Navbar className="navigationBar" variant="light" collapseOnSelect fixed='top' expand='xl' >
                  <h4>SECOND CHANCE THROUGH CODE</h4>
-                        <Nav.Link href="/home">HOME</Nav.Link>
-                        <Nav.Link href='/resources'>RESOURCES</Nav.Link>
-                        <Nav.Link href='/stories'>STORIES</Nav.Link>
-                        <Nav.Link href='/media'>MEDIA</Nav.Link>
+                        <Nav.Link href="/home" className='one'>HOME</Nav.Link>
+                        <Nav.Link href='/resources' className='two'>RESOURCES</Nav.Link>
+                        <Nav.Link href='/stories' className='three'>STORIES</Nav.Link>
+                        <Nav.Link href='/media' className='four'>MEDIA</Nav.Link>
 
   
             
@@ -23,11 +23,11 @@ export default function NavBar() {
           <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
-        </NavDropdown> */}
-        <Form inline>
+        </NavDropdown>  */}
+        {/* <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" bg='light'/>
       <Button variant="outline-light">Search</Button>
-    </Form>
+    </Form> */}
             </Navbar>
         
       </Nav>

@@ -15,7 +15,7 @@ export default function Home() {
             <img className='techGuy' src={GuyCoding} alt="Boomer doggo."/>
           </div>
         </div>
-        <div className='homeContainer'>
+        <div className='homeContainer-2'>
           <div className='boxThree'><img src="https://www.comevo.com/wp-content/uploads/2019/10/Blog-post-photo.jpg" alt="Boomer doggo."/></div>
           <div className='boxFour'><img src="https://worktogether4peace.org/wp-content/uploads/2018/04/29541523_10155177571686237_7583812550276138378_n.jpg" alt="Boomer doggo."/></div>
           <div className='boxFive'><img src="https://images.theconversation.com/files/378668/original/file-20210113-23-1trii4t.png?ixlib=rb-1.1.0&q=45&auto=format&w=754&h=321&fit=crop&dpr=1" alt="Boomer doggo."/></div>

@@ -1,9 +1,32 @@
-import React from 'react'
+import { useState, useEffect} from "react";
 
 export default function Stories() {
-    return (
-        <div>
-            Stories
+  let [stories, setStories] = useState([])
+
+  useEffect(() => {
+    fetch("/api/stories")
+      .then(res => res.json())
+      .then(json => {
+        setStories(json.stories)
+      })
+  }, [])
+
+  return (
+      <div id="main_panel">          
+      <div className='inner-pannel'>
+        <div >
+                {stories.map(story => (
+                    <tbody>
+                        <tr>
+                        <td className="picture"> <img className='tinyLogo' src={`${story.pic}`} /></td>   
+                        <td>{story.name}</td>
+                        <td>{story.program}</td>
+                        <td><i>"{story.testimony}"</i></td>
+                        </tr>        
+                    </tbody>
+                ))}
         </div>
-    )
+    </div>
+    </div>
+  )
 }

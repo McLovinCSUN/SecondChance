@@ -7,11 +7,18 @@ import Media from './pages/Media';
 import Resources from './pages/Resources';
 import Stories from './pages/Stories';
 import Footer from './components/Footer';
+import { makeServer } from './Server'
 
+if (process.env.NODE_ENV === "development") {
+    if (window.server) {
+    window.server.shutdown();
+  }
+  window.server = makeServer();
+}
 
 function App() {
 
-  return ( 
+  return (
         
         <div id="main_panel">
         <NavBar />
