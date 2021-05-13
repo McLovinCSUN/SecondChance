@@ -1,4 +1,5 @@
 import { useState, useEffect} from "react";
+import Survey from '../components/Questions';
 
 export default function Resources() {
   let [resources, setResources] = useState([])
@@ -12,9 +13,10 @@ export default function Resources() {
   }, [])
 
   return (
-      <div id="main_panel">          
+      <div id="main_panel">   
+          
       <div className='inner-pannel'>
-    
+       
         <div >
          {resources.map(resource => (
             <tbody>
@@ -34,6 +36,7 @@ export default function Resources() {
           ))}
         </div>
     </div>
+      <Survey/>   
     </div>
   )
 }
