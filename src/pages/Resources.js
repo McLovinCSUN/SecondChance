@@ -1,5 +1,6 @@
 import { useState, useEffect} from "react";
 import Survey from '../components/Questions';
+import './Resources.css';
 
 export default function Resources() {
   let [resources, setResources] = useState([])
