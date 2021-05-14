@@ -39,7 +39,7 @@ class Questions extends Component {
   title: `Having trouble deciding where to apply? Take our quiz to provide suggestions ☺`,
   showProgressBar: "bottom",
   firstPageIsStarted: true,
-  startSurveyText: "Start Quiz",
+  startSurveyText: "Start",
   pages: [
     { questions: [ {type: "html", html: "Please click on <b>'Start Quiz'</b> button when you are ready." } ] },
     {
