@@ -1,35 +1,42 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, setState } from "react";
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
 import "./Survey.css";
 
 Survey.StylesManager.applyTheme("default");
 class Questions extends Component {
- 
-   constructor() {
-        super(); 
-    }
-   
-     onComplete(survey) {
-    //Write survey results into database
-    let options=['Emergernt Works','Underdog Devs','Justice Through Code', 'Next Chapter'];
-    
+
+
+   onComplete(survey) {
+    let options=['Emergernt Works','Underdog Devs','Justice Through Code', 'Next Chapter', 'Reboot LA'];
+    let message ='We suggest you start with:';
+    let suggestions=[];
+
     if(survey.data['exLvl'] === 'New' && survey.data['exJS'] === 'None' ){
-      alert(`We suggest you start with:\n ${options[0]}`);
-    }else if(survey.data['exLvl'] === 'Intermidate' && survey.data['exJS'] === 'Some'  ){
-      alert(`We suggest you start with:\n ${options[0]}\n ${options[2]}`);
+      suggestions.push(options[0]);
+    }else if(survey.data['exLvl'] === 'Intermidate' && survey.data['exJS'] === 'Some'){
+      suggestions.push(options[0]);
+      suggestions.push(options[2]);
     }else if(survey.data['exLvl'] === 'Advance' && survey.data['exJS'] === 'Advance'){
-      alert(`We suggest you start with:\n ${options[3]}`);
+      suggestions.push(options[3]);
     }else{
-      alert(`We suggest you start with:\n ${options[0]}\n ${options[1]}\n ${options[2]}`);
+      suggestions.push(options[0]);
+      suggestions.push(options[1]);
+      suggestions.push(options[2]);
     }
-    console.log("Survey results: " + JSON.stringify(survey.data));
-    // alert(JSON.stringify(survey.data));
-    // console.log(this.suggestion);
+
+    if(survey.data['inLA'] === 'Yes'){
+     suggestions.push(options[4]);
+    }
+     alert(`${message}\n${suggestions}`);
+    //  console.log("Survey results: " + JSON.stringify(survey.data));
   }
-    render() {
+
+
+  render() {
+  
   const json = {
-  title: "If you are having trouble deciding where to apply take our quiz for us to provide suggestions ☺",
+  title: `Having trouble deciding where to apply? Take our quiz to provide suggestions ☺`,
   showProgressBar: "bottom",
   firstPageIsStarted: true,
   startSurveyText: "Start Quiz",
@@ -64,10 +71,21 @@ class Questions extends Component {
           choices: [ "Self learner", "Mentor/mentee perferably", "I am okay with both" ],
         }
       ]
+    },
+    {
+      questions: [
+        {
+          type: "radiogroup",
+          name: "inLA",
+          title: "Are you living in Los Angeles County?",
+          choices: ["Yes", "No"],
+        }
+      ]
     }
   ],
-  completedHtml: "<h4>Our suggestions</h4>"
 };
+
+
 const survey = new Survey.Model(json);
 
         return (
@@ -76,7 +94,6 @@ const survey = new Survey.Model(json);
                 model={survey}
                 onComplete={this.onComplete}
             />
-          
           </>
         );
     }
