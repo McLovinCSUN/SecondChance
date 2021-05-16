@@ -1,5 +1,5 @@
 //imported miragejs to create a fake server to populate the student information on the info page
-import { Server, Model } from "miragejs";
+import {Server} from "miragejs";
 import Maria from './images/maria.png';
 import Ade from './images/ade.jpg';
 import Yazmine from './images/yazmine.jpg';
@@ -143,7 +143,7 @@ export function makeServer({environment = "development"} = {}) {
                         id: 1, 
                         name: "Maria", 
                         program: "Emergent Works, Justice Through Code, Underdog Devs", 
-                        testimony: "After completing Emergent Works cohort over the winter I learned how to use git properly and developed a mobile application using React Native. Justice Through Code has made more confortable with Python. Underdog Devs has a whole community to help you grow your tech skills and soft skills. With these programs I would have not been able to build my portfolio and land an internship with Disney Tech this summer!", 
+                        testimony: "After completing Emergent Works cohort over the winter I learned how to use git properly and developed a mobile application using React Native. Justice Through Code has made me more confortable with Python. Underdog Devs has a whole community to help you grow your tech skills and soft skills. With these programs I would have not been able to build my portfolio and land an internship with Disney Tech this summer!", 
                         pic: Maria, 
                     },
                    {
