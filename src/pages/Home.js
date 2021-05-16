@@ -18,7 +18,7 @@ export default function Home() {
         <div className='homeContainer-2'>
           <div className='boxThree'><img src="https://www.comevo.com/wp-content/uploads/2019/10/Blog-post-photo.jpg" alt="chain and ball with a graduation hat"/></div>
           <div className='boxFour'><img src="https://worktogether4peace.org/wp-content/uploads/2018/04/29541523_10155177571686237_7583812550276138378_n.jpg" alt="Incarceration VS Education Image"/></div>
-          <div className='boxFive'><img src="https://images.theconversation.com/files/378668/original/file-20210113-23-1trii4t.png?ixlib=rb-1.1.0&q=45&auto=format&w=754&h=321&fit=crop&dpr=1" alt="An image stating figures on incarceration"/></div>
+          <div className='boxFive'><img src="https://images.theconversation.com/files/378668/original/file-20210113-23-1trii4t.png?ixlib=rb-1.1.0&q=45&auto=format&w=754&h=321&fit=crop&dpr=1" alt="Stating figures on incarceration"/></div>
           <div className='boxSix'><img src="https://i.pinimg.com/originals/78/f7/71/78f771e3daeb0da4886230e9403a0925.png" alt="A statement on re-entry programs giving opportunities to returning citizens"/></div>    
         </div>
         <div className='homeContainer'>
