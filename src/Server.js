@@ -1,5 +1,5 @@
 //imported miragejs to create a fake server to populate the student information on the info page
-import { Server, Model } from "miragejs";
+import {Server} from "miragejs";
 import Maria from './images/maria.png';
 import Ade from './images/ade.jpg';
 import Yazmine from './images/yazmine.jpg';

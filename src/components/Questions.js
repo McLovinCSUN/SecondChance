@@ -3,15 +3,17 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 import "./Survey.css";
 
+//here we use survey react js library to be able to set a little questionnaire
 Survey.StylesManager.applyTheme("default");
 class Questions extends Component {
  
-   constructor() {
-        super(); 
-    }
+  //  constructor() {
+  //       super(); 
+  //   }
    
-     onComplete(survey) {
-    //Write survey results into database
+  //once the user is done answering the questions this function is called and then an alert message displays the suggestion 
+  //made by the logic within this function
+  onComplete(survey) {
     let options=['Emergernt Works','Underdog Devs','Justice Through Code', 'Next Chapter'];
     
     if(survey.data['exLvl'] === 'New' && survey.data['exJS'] === 'None' ){
@@ -27,7 +29,8 @@ class Questions extends Component {
     // alert(JSON.stringify(survey.data));
     // console.log(this.suggestion);
   }
-    render() {
+  
+  render() {
   const json = {
   title: "If you are having trouble deciding where to apply take our quiz for us to provide suggestions ☺",
   showProgressBar: "bottom",
@@ -66,18 +69,17 @@ class Questions extends Component {
       ]
     }
   ],
-  completedHtml: "<h4>Our suggestions</h4>"
 };
 const survey = new Survey.Model(json);
 
         return (
-          <>
+          <div className="surveyContainer">
             <Survey.Survey
                 model={survey}
                 onComplete={this.onComplete}
             />
           
-          </>
+          </div>
         );
     }
 }
