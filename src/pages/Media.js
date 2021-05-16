@@ -2,8 +2,10 @@ import { useState, useEffect} from "react";
 import {Row, Col,Card} from 'react-bootstrap';
 
 export default function Media() {
+  //once we make the call to our mock server the object will be set to stories as an array 
   let [medias, setMedia] = useState([])
 
+  //this state is set once the email has been copied onto the clip board and will display copied once it was successful to user
   useEffect(() => {
     fetch("/api/media")
       .then(res => res.json())
@@ -12,8 +14,10 @@ export default function Media() {
       })
   }, [])
 
+  //here we use bootstrap's cards to display the individual information and testitmony
+  //inline styling works better with bootstarp 
   return (
-      <div id="main_panel">          
+    <div id="main_panel">          
       <div className='inner-pannel'>
          {medias.map(media => (
            <Row>
@@ -40,7 +44,7 @@ export default function Media() {
             </Col>
           </Row>
         ))}  
-    </div>
+      </div>
     </div>
   )
 }
