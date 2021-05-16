@@ -48,11 +48,11 @@ export default function Resources() {
                     <Card.Body>
                       <Card.Title>{resource.name }</Card.Title>
                       <Card.Subtitle>{resource.address === '' ? null: resource.address}<br/></Card.Subtitle>
-                       <Card.Link href={resource.linkedIn}>{resource.linkedIn !== '' ? null: <FaLinkedin/>}</Card.Link>
-                       <Card.Link href={resource.facebook}>{resource.facebook === '' ? null: <FaFacebook/>}</Card.Link>
-                       <Card.Link href={resource.instagram}>{resource.instagram === '' ? null: <FaInstagram/>}</Card.Link>
-                       <Card.Link href={resource.twitter}>{resource.twitter === '' ? null: <FaTwitter/>}</Card.Link>
-                       <Card.Link href={resource.website}>{resource.website === '' ? null: <FaGlobe/>}</Card.Link>
+                       <Card.Link href={resource.linkedIn} target="_blank">{resource.linkedIn !== '' ? null: <FaLinkedin/>}</Card.Link>
+                       <Card.Link href={resource.facebook} target="_blank">{resource.facebook === '' ? null: <FaFacebook/>}</Card.Link>
+                       <Card.Link href={resource.instagram} target="_blank">{resource.instagram === '' ? null: <FaInstagram/>}</Card.Link>
+                       <Card.Link href={resource.twitter} target="_blank">{resource.twitter === '' ? null: <FaTwitter/>}</Card.Link>
+                       <Card.Link href={resource.website} target="_blank">{resource.website === '' ? null: <FaGlobe/>}</Card.Link>
                        <Button variant="link"onClick={()=>copyToClipboard(resource.email)}>{resource.email === '' ? null: <FaEnvelope/>}</Button>
                        {copySuccess}
                     </Card.Body>

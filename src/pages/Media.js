@@ -36,7 +36,7 @@ export default function Media() {
                     <Card.Body>
                       <Card.Title>{media.title}</Card.Title>
                       <Card.Subtitle>{media.date}</Card.Subtitle>
-                       <Card.Link href={media.link}>Read More</Card.Link>
+                       <Card.Link href={media.link} target="_blank">Read More</Card.Link>
                     </Card.Body>
                   </Col>
                 </Row>
