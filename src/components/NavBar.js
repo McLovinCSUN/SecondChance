@@ -10,25 +10,10 @@ export default function NavBar() {
         
         <Navbar className="navigationBar" variant="light" collapseOnSelect fixed='top' expand='xl' >
                  <h4>SECOND CHANCE THROUGH CODE</h4>
-                 <a href ='#' class = "toggle-button">
-                    <span class ="bar"></span>
-                    <span class ="bar"></span>
-                    <span class ="bar"></span>
-                  </a>
-                 <div class="navbar-link">
-                   <ul>
-                     <li><a href ="#">HOMES</a></li>
-                     <li><a href ="#">RESOURCES</a></li>
-                     <li><a href ="#">STORIES</a></li>
-                     <li><a href ="#">MEDIA</a></li>
-                  </ul>
-                 </div>
-                 
-                        {/* <Nav.Link href="/home">HOME</Nav.Link>
+                        <Nav.Link href="/home">HOME</Nav.Link>
                         <Nav.Link href='/resources'>RESOURCES</Nav.Link>
                         <Nav.Link href='/stories'>STORIES</Nav.Link>
-                        <Nav.Link href='/media'>MEDIA</Nav.Link> */}
-
+                        <Nav.Link href='/media'>MEDIA</Nav.Link>
 
   
             
@@ -39,22 +24,14 @@ export default function NavBar() {
           <NavDropdown.Divider />
           <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
         </NavDropdown> */}
-
-        
-                     <Form inline>
-                      <FormControl type="text" placeholder="Search" className="mr-sm-2" bg='light'/>
-                      <Button variant="outline-light">Search</Button>
-                    </Form>
+        <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" bg='light'/>
+      <Button variant="outline-light">Search</Button>
+    </Form>
             </Navbar>
         
       </Nav>
     )
   }
 
-  const toggleButton = document.getElementsByClassName('toggle-button')[0]
-  const navbarLinks = document.getElementsByClassName('navbar-link')[0]
 
-  toggleButton.addEventListener('click', ()=> {
-    navbarLinks.classList.toggle('active')
-  })
-  
