@@ -1,17 +1,112 @@
+
 .navigationBar {
-  background-color: #fe7ec9;
   display: right;
+  background-color: #5c89c3;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  color: white; 
 }
 .nav-link {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto",sans-serif;
   color: white;
 }
+
+.navbar-link ul{
+  margin: 0;
+  padding: 0;
+  display:flex;
+}
+
+.navbar-link li{
+  font-family: "Roboto",sans-serif;
+  font-size: large;
+  list-style:none; 
+}
+
+
+.navbar-link li a{
+  text-decoration: none; 
+  list-style:none; 
+  color: white; 
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-link li:hover {
+  background: rgb(39, 71, 255); 
+}
+
+
 h4 {
   color: white;
   font-weight: 700;
-  margin-left: 12vw;
-  margin-right: 2vw;
 }
 .mr-sm-2 {
   margin-left: 5vw;
+}
+
+.toggle-button
+{
+  position: absolute; 
+  top: .75rem; 
+  right: 1rem; 
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar
+{
+  height: 3px; 
+  width: 100%;
+  background-color:white; 
+  border-radius: 10px;
+}
+
+
+@media(max-width:600px)
+{
+
+  .toggle-button{
+    display:flex;
+  }
+  .navbar-link{
+    display: none;
+    width: 100%; 
+  }
+  .navigationBar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-link ul{
+    width: 100%;
+    flex-direction: column; 
+  }
+  .navbar-link li{
+    text-align: center; 
+  }
+  .navbar-link li a{
+    padding: .5em 1rem; 
+  }
+  .navbar-link.active{
+    display:flex;   
+  }
+  .mr-sm-2.active {
+    display:flex;
+  }
+
+  .form-inline {
+    display: flex;
+  }  
+  .form-control
+  {
+    margin:0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 }
