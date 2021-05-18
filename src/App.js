@@ -7,12 +7,21 @@ import Media from './pages/Media';
 import Resources from './pages/Resources';
 import Stories from './pages/Stories';
 import Footer from './components/Footer';
+import {makeServer} from './Server'
 
+//this is where we call to make our mock server 
+if (process.env.NODE_ENV === "development") {
+  if (window.server) {
+    window.server.shutdown();
+  }
+  window.server = makeServer();
+}
 
 function App() {
 
-  return ( 
-        
+  //this is where we define our navbar and footer components
+  //between we state the routhe path that will render when route link is click on our navbar
+  return (   
         <div id="main_panel">
         <NavBar />
         <div className="inner-pannel">
@@ -28,7 +37,6 @@ function App() {
       </div>
         <Footer /> 
       </div>
-    
   );
 }
 
