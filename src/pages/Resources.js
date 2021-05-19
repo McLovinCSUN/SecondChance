@@ -3,6 +3,7 @@ import Survey from '../components/Questions';
 import {Row, Col,Card, Button} from 'react-bootstrap';
 import { FaGlobe,  FaEnvelope, FaLinkedin, FaFacebook, FaTwitter, FaInstagram} from "react-icons/fa";
 import './Resources.css';
+import { getByDisplayValue } from "@testing-library/dom";
 
 export default function Resources() {
   //once we make the call to our mock server the object will be set to stories as an array 
@@ -25,45 +26,48 @@ export default function Resources() {
       })
   }, [])
 
+  
   //here we use bootstrap's cards to display the individual information and testitmony
   //inline styling works better with bootstarp 
   return (
-      <div id="main_panel">    
-      <div className='inner-pannel'>
-        <div >
-         {resources.map(resource => (
-           <Row>
-            <Col>
-              <Card  border="primary"  style={{ width: '70rem',  display: 'block', margin: 'auto', marginTop: '10px', marginBottom:'10px', boxShadow: '2px 2px 4px #000000'}} >
-                <Row className="no-gutters">
-                  <Col md="4">
-                    <Card.Img
-                      top
-                      width="100%"
-                      src={`${resource.logo} `}
-                      alt="Organization Logo"
-                    />
-                  </Col>
-                  <Col md="8">
-                    <Card.Body>
-                      <Card.Title>{resource.name }</Card.Title>
-                      <Card.Subtitle>{resource.address === '' ? null: resource.address}<br/></Card.Subtitle>
-                       <Card.Link href={resource.linkedIn} target="_blank">{resource.linkedIn !== '' ? null: <FaLinkedin/>}</Card.Link>
-                       <Card.Link href={resource.facebook} target="_blank">{resource.facebook === '' ? null: <FaFacebook/>}</Card.Link>
-                       <Card.Link href={resource.instagram} target="_blank">{resource.instagram === '' ? null: <FaInstagram/>}</Card.Link>
-                       <Card.Link href={resource.twitter} target="_blank">{resource.twitter === '' ? null: <FaTwitter/>}</Card.Link>
-                       <Card.Link href={resource.website} target="_blank">{resource.website === '' ? null: <FaGlobe/>}</Card.Link>
-                       <Button variant="link"onClick={()=>copyToClipboard(resource.email)}>{resource.email === '' ? null: <FaEnvelope/>}</Button>
-                       {copySuccess}
-                    </Card.Body>
-                  </Col>
-                </Row>
-              </Card>
-            </Col>
-          </Row>
-          ))}
-        </div>
+
+    <div id="main_panel-resource" className='homeContainer section col-lg-12 col-md-12 col-sm-12'>
+    <div className='row'>
+        <ul>
+            {resources.map(resource => (
+            <li>
+                <div className='card mb-3'>
+                    <div className='row g-0'>
+                        <div className='col-md-4'>
+                            <a href={resource.website}><img alt='Resosurce Logo' src={resource.logo} width='200' height='80' /></a>
+                        </div>
+                        <div className='col-md-8'>
+                            <div className='card-body'>
+                              
+                                {/* <h5 className='card-title'>{resource.name}</h5> */}
+                                <p className='card-text'><small className='text-muted'>{resource.location}</small></p>
+                                <p className='card-text'><small className='text-muted'>{resource.address}</small></p>
+
+                
+                                <Card.Body>
+                                  <Card.Link href={resource.linkedIn} target="_blank" style={{ display: resource.linkedIn !=='' ? 'block': 'none'}}>{resource.linkedIn === '' ? null:   <FaLinkedin/>}</Card.Link>
+                                  <Card.Link href={resource.facebook} target="_blank" style={{ display: resource.facebook !=='' ? 'block': 'none'}}>{resource.facebook === '' ? null: <FaFacebook/>}</Card.Link>
+                                  <Card.Link href={resource.instagram} target="_blank" style={{ display: resource.instagram  !=='' ? 'block': 'none'}}>{resource.instagram === '' ? null: <FaInstagram/>}</Card.Link>
+                                  <Card.Link href={resource.twitter} target="_blank" style={{ display: resource.twitter !=='' ? 'block': 'none'}}>{resource.twitter === '' ? null: <FaTwitter/>}</Card.Link>
+                                  <Card.Link href={resource.website} target="_blank">{resource.website === '' ? null: <FaGlobe/>}</Card.Link>
+                                  <Button variant="link" onClick={()=>copyToClipboard(resource.email)}>{resource.email === '' ? null: <FaEnvelope/>}</Button>
+                                  {copySuccess}
+                                </Card.Body>
+                  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        ))} 
+        </ul>
     </div>
+
       <Survey/>   
     </div>
   )
