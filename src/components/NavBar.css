@@ -1,6 +1,10 @@
 .navigationBar {
   background-color: #5c89c3;
-  display: right;
+  display: center;
+}
+
+.Title{
+  margin-left: 5rem;
 }
 
 .NavBar {
