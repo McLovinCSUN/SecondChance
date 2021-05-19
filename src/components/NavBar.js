@@ -1,35 +1,28 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown,  Form, Button, FormControl } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Form, Button, FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css';
-import './buttonToggle.js';
 
 export default function NavBar() {
-    const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
-    return (
-      <Nav variant="pills" activeKey="1" onSelect={handleSelect} >
-        
-        <Navbar className="navigationBar" variant="light" collapseOnSelect fixed='top' expand='xl' >
-        <script type = "buttonToggle.js"></script>
-                 <h4>SECOND CHANCE THROUGH CODE</h4>
-                 <a href ='#' class = "toggle-button">
-                    <span class ="bar"></span>
-                    <span class ="bar"></span>
-                    <span class ="bar"></span>
-                  </a>
-                 <div class="navbar-link">
-                   <ul>
-                     <li><a href ="#">HOMES</a></li>
-                     <li><a href ="#">RESOURCES</a></li>
-                     <li><a href ="#">STORIES</a></li>
-                     <li><a href ="#">MEDIA</a></li>
-                  </ul>
-                 </div>
-            </Navbar>
-        
-      </Nav>
-    )
-  }
+  const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
+  return (
+    <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" collapseOnSelect fixed='top' expand='xl' >
+      <Navbar.Brand href="/home">SECOND CHANCE THROUGH CODE</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+            <Nav.Link href="/home"><a>HOME</a></Nav.Link>
+            <Nav.Link href="/resource">RESOURCES</Nav.Link>
+            <Nav.Link href="/stories">STORIES</Nav.Link>
+            <Nav.Link href="/media">MEDIA</Nav.Link>
+          
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  )
+}
+
+
 
 
 
