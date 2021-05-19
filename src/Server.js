@@ -203,14 +203,7 @@ export function makeServer({environment = "development"} = {}) {
                         date: 'Octorber 23, 2020',
                         title: "Sabio and the City of Los Angeles announce a partnership, RebootLA Tech Incubator, to provide technical and entrepreneurial incubation to returning citizens in the City of LA.", 
                         link: "https://www.prnewswire.com/news-releases/sabio-and-the-city-of-los-angeles-announce-a-partnership-rebootla-tech-incubator-to-provide-technical-and-entrepreneurial-incubation-to-returning-citizens-in-the-city-of-la-301159006.html", 
-                        pic: '',
-                      },
-                         {
-                        id: 5, 
-                        date: 'December 01, 2020',
-                        title: "Code Tenderloin teaches basic coding skills, job readiness skills to disenfranchised in SF", 
-                        link: "https://www.prnewsCheckered past is no barrier to Checkr jobwire.com/news-releases/sabio-and-the-city-of-los-angeles-announce-a-partnership-rebootla-tech-incubator-to-provide-technical-and-entrepreneurial-incubation-to-returning-citizens-in-the-city-of-la-301159006.html", 
-                        pic: '',
+                        pic: 'http://reboot.la/wp-content/uploads/2020/10/Sabio-Alumni_Copresidents-FutureWork-edited-1-1024x682.jpeg',
                       },
 
                     ],
