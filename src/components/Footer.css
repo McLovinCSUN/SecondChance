@@ -5,22 +5,29 @@
   background-color: #5c89c3;
   text-align: center;
   width: 100%;
-  color: #4d4d4d;
+  color: #fff;
 }
 button {
   background: none;
   border: none;
-  color: #4d4d4d;
+  color: #fff;
 }
 .emailForm {
   visibility: hidden;
 }
-.email,
-.address {
+
+.email ul li svg, .address ul li svg {
+    margin-right: 5px;
+}
+
+.address-nav, .email-nav {
+    padding: 20px 60px;
+}
+
+.email, .address {
   justify-content: center;
   flex-grow: 2;
-  margin: 20px;
-  background-color: white;
+  color: #fff;
   border-radius: 6px;
 }
 
@@ -31,15 +38,6 @@ button {
   .map {
     height: 50px;
   }
-  .envelope {
-    margin-top: 20px;
-  }
-  .address {
-    margin-left: 10px;
-  }
-  .email {
-    margin-right: 10px;
-  }
 }
 @media only screen and (min-width: 768px) {
   .footerContainer {
@@ -47,14 +45,5 @@ button {
   }
   .map {
     height: 50px;
-  }
-  .envelope {
-    margin-top: 60px;
-  }
-  .address {
-    margin-left: 80px;
-  }
-  .email {
-    margin-right: 80px;
   }
 }
