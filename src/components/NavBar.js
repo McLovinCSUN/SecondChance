@@ -6,7 +6,7 @@ import './NavBar.css';
 export default function NavBar() {
   const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
   return (
-    <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" collapseOnSelect fixed='top' expand='xl' >
+    <Navbar className="navigationBar" collapseOnSelect expand="lg" variant="dark" collapseOnSelect fixed='top' expand='xl' >
       <Navbar.Brand href="/home">SECOND CHANCE THROUGH CODE</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
