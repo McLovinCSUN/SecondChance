@@ -24,7 +24,14 @@ button {
     padding: 20px 60px;
 }
 
-.email, .address {
+.address {
+  justify-content: center;
+  flex-grow: 2;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.email {
   justify-content: center;
   flex-grow: 2;
   color: #fff;
@@ -45,5 +52,19 @@ button {
   }
   .map {
     height: 50px;
+  }
+
+  .address {
+    justify-content: center;
+    flex-grow: 2;
+    color: #fff;
+    border-radius: 6px;
+  }
+  
+  .email {
+    justify-content: center;
+    flex-grow: 2;
+    color: #fff;
+    border-radius: 6px;
   }
 }
