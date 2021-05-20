@@ -26,10 +26,10 @@ export default function FooterAddress() {
                                         <FaMapMarkerAlt/> 
                                     </IconContext.Provider>
                                 
-                                    <span>Project Rebound - CHS JR Hall 148</span>
+                                    <div>Project Rebound - CHS JR Hall 148</div>
                                 </li>
                                 <li>
-                                    18111 Nordhoff Street, Northridge, Ca, 91330-8246    
+                                    <div>18111 Nordhoff Street, Northridge, Ca, 91330-8246</div>    
                                 </li>
                             </ul>
                         </div>
@@ -45,7 +45,7 @@ export default function FooterAddress() {
                                 </li>
                                 <li>
                                     <button onClick={copyToClipboard}>
-                                        projectrebound@csun.edu
+                                        <div>projectrebound@csun.edu</div>
                                     </button>
 
                                     {copySuccess}
