@@ -6,7 +6,8 @@
   align-content: center;
   width: 100%;
 }
-.homeContainer > * {
+
+.homeContainer>* {
   padding: 1em;
   border-radius: 2em;
 }
@@ -27,23 +28,25 @@
     width: 40%;
     text-align: justify;
   }
+
   .headerHomePage {
     color: #488df4;
     padding: 5px;
     font-family: Oswald, sans-serif;
     font-size: 0.75rem;
     margin: 80px 30px 0;
-    
+
     text-align: left;
   }
+
   h1.headerHomePage {
-    
+
     margin-left: 1vw;
     width: 100px;
-    
+
   }
 
-  .headerHomePage boxOne{
+  .headerHomePage boxOne {
     background-color: black;
   }
 
@@ -57,10 +60,7 @@
     width: 25%;
     text-align: center;
   }
-  .techGuy {
-    width: 50vw;
-    margin-top: 100%;
-  }
+
   .boxThree,
   .boxFour,
   .boxFive,
@@ -68,6 +68,7 @@
     height: fit-content;
     width: fit-content;
   }
+
   .boxThree {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -75,11 +76,13 @@
     grid-row-end: 3;
     background-color: #38c4c1;
   }
-  .boxThree > img {
+
+  .boxThree>img {
     margin-top: 40px;
     width: 325px;
     padding-bottom: 25px;
   }
+
   .boxFour {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -87,9 +90,11 @@
     grid-row-end: 4;
     background-color: #feca02;
   }
-  .boxFour > img {
+
+  .boxFour>img {
     width: 225px;
   }
+
   .boxFive {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -97,11 +102,13 @@
     grid-row-end: 5;
     background-color: #fe7ec9;
   }
-  .boxFive > img {
+
+  .boxFive>img {
     margin-top: 40px;
     width: 325px;
     padding-bottom: 100px;
   }
+
   .boxSix {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -109,31 +116,38 @@
     grid-row-end: 6;
     background-color: #488df4;
   }
-  .boxSix > img {
+
+  .boxSix>img {
     width: 225px;
     padding-bottom: 50px;
   }
+
   .rounded {
     border-top: 8px solid #808080;
     /* border-radius: 5px; */
     width: 50px;
   }
+
   .boxSeven {
     text-align: center;
     width: 800px;
   }
-  .boxSeven > h4 {
+
+  .boxSeven>h4 {
     color: #4d4d4d;
     margin: 0;
     margin-top: 60px;
     margin-bottom: 60px;
   }
 }
+
 @media only screen and (min-width: 768px) {
+
   .homeContainer,
   .homeContainer-2 {
     width: 750px;
   }
+
   .boxOne {
     margin-top: 50px;
     grid-column-start: 1;
@@ -147,6 +161,7 @@
     height: 400px;
     width: 25%;
   }
+
   .headerHomePage {
     color: #488df4;
     font-family: Oswald, sans-serif;
@@ -154,10 +169,12 @@
     margin: 62px 30px 0;
     /* text-align: center; */
   }
+
   h1.headerHomePage {
     margin-left: auto;
     width: 200px;
   }
+
   .boxTwo {
     margin-top: 50px;
     grid-column-start: 2;
@@ -168,10 +185,12 @@
     width: 25%;
     text-align: center;
   }
+
   .techGuy {
     width: 50vw;
     margin-top: 100%;
   }
+
   .boxThree,
   .boxFour,
   .boxFive,
@@ -179,6 +198,7 @@
     height: fit-content;
     width: fit-content;
   }
+
   .boxThree {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -186,11 +206,13 @@
     grid-row-end: 3;
     background-color: #38c4c1;
   }
-  .boxThree > img {
+
+  .boxThree>img {
     margin-top: 40px;
     width: 325px;
     padding-bottom: 25px;
   }
+
   .boxFour {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -198,9 +220,11 @@
     grid-row-end: 2;
     background-color: #feca02;
   }
-  .boxFour > img {
+
+  .boxFour>img {
     width: 225px;
   }
+
   .boxFive {
     grid-column-start: 3;
     grid-column-end: 4;
@@ -208,11 +232,13 @@
     grid-row-end: 2;
     background-color: #fe7ec9;
   }
-  .boxFive > img {
+
+  .boxFive>img {
     margin-top: 40px;
     width: 325px;
     padding-bottom: 100px;
   }
+
   .boxSix {
     grid-column-start: 4;
     grid-column-end: 5;
@@ -220,27 +246,33 @@
     grid-row-end: 2;
     background-color: #488df4;
   }
-  .boxSix > img {
+
+  .boxSix>img {
     width: 225px;
     padding-bottom: 50px;
   }
+
   .rounded {
     border-top: 8px solid #808080;
     /* border-radius: 5px; */
     width: 50px;
   }
+
   .boxSeven {
     text-align: center;
     width: 800px;
   }
-  .boxSeven > h4 {
+
+  .boxSeven>h4 {
     color: #4d4d4d;
     margin: 0;
     margin-top: 60px;
     margin-bottom: 60px;
   }
 }
+
 @media screen and (min-width: 1280px) {
+
   /* For Big TV's (HD Screens)  */
   .homeContainer,
   .homeContainer-2 {
