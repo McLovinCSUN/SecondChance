@@ -6,7 +6,7 @@ import {Container, Row, Col } from 'react-bootstrap';
 export default function Home() {
     return (
       <>
-      <Container>
+      <Container className="justify-content-md-center">
       <Container>
         <div className='homeContainer'>
         <Row>
